@@ -13,7 +13,18 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 
 # Create your objects here.
 ev3 = EV3Brick()
-jm = Motor(Port.A) #bal c
+# motorok kezelése
+jm = Motor(Port.B)
+bm = Motor(Port.C)
+robot DriveBase(jm, bm, 56, 130)
+
+# szenzorok
+us = UltrasonicSensor(Port.S4)
+ts = TouchSensor(Port.S1)
+cs = ColorSensor(Port.S3)
+
+# robot irányítása
+robot.drive(100,0)
 
 # Write your program here.
 ev3.speaker.beep()
