@@ -24,7 +24,12 @@ ts = TouchSensor(Port.S1)
 cs = ColorSensor(Port.S3)
 
 # robot irányítása
-robot.drive(100,0)
+robot.drive(100,0) #egyenesen megy
+
+robot.drive(0, 180) #forduljon 90 fokot
+wait(500)           #várjon amíg megtörténik a forgás
+
+robot.stop(Stop.Brake) #satufékes megállás
 
 # Write your program here.
 ev3.speaker.beep()
