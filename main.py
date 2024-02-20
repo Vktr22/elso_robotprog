@@ -18,6 +18,7 @@ ev3 = EV3Brick()
 # motorok kezelése
 jm = Motor(Port.B)
 bm = Motor(Port.C)
+km = Motor(Port.A)
 #robot DriveBase(jm, bm, 56, 130)
 
 # szenzorok
